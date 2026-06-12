@@ -39,14 +39,14 @@ Includes a troubleshooting section for `Permission denied (publickey)` SSH error
 ### Via skills CLI (recommended)
 
 ```bash
-npx skills add UEM-Group-Websites/gcp-vm-skills
+npx skills add RenderbitTechnologies/gcp-vm-skills
 ```
 
 ### Claude Code (manual)
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/UEM-Group-Websites/gcp-vm-skills.git /tmp/gcp-vm-skills
+git clone https://github.com/RenderbitTechnologies/gcp-vm-skills.git /tmp/gcp-vm-skills
 
 # 2. Copy the skill
 mkdir -p ~/.agents/skills/gcp-node-vm-deploy
