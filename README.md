@@ -1,6 +1,6 @@
 # gcp-vm-skills
 
-Claude Code skills for deploying and managing Node.js applications on Google Cloud Platform Compute Engine VMs.
+AI agent skills for deploying and managing back-end and full-stack applications on Google Cloud Platform Compute Engine VMs.
 
 ## Skills
 
