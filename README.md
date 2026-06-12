@@ -36,7 +36,13 @@ Includes a troubleshooting section for `Permission denied (publickey)` SSH error
 
 ## Installation
 
-### Claude Code
+### Via skills CLI (recommended)
+
+```bash
+npx skills add UEM-Group-Websites/gcp-vm-skills
+```
+
+### Claude Code (manual)
 
 ```bash
 # 1. Clone this repo
@@ -51,12 +57,6 @@ ln -s "../../.agents/skills/gcp-node-vm-deploy" ~/.claude/skills/gcp-node-vm-dep
 ```
 
 Restart Claude Code — the skill will appear automatically.
-
-### Via skill-installer (if available)
-
-```
-/skill-installer install https://github.com/UEM-Group-Websites/gcp-vm-skills
-```
 
 ## Usage
 
