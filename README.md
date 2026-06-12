@@ -38,25 +38,42 @@ Includes a troubleshooting section for `Permission denied (publickey)` SSH error
 
 ### Via skills CLI (recommended)
 
-```bash
+```shell
 npx skills add RenderbitTechnologies/gcp-vm-skills
+```
+
+### From a release (manual)
+
+Download the `.skill` file for a specific skill from the [Releases](https://github.com/RenderbitTechnologies/gcp-vm-skills/releases) page, then install it:
+
+```shell
+# Example for gcp-node-vm-deploy
+unzip gcp-node-vm-deploy.skill -d ~/.agents/skills/
+ln -s "../../.agents/skills/gcp-node-vm-deploy" \
+      ~/.claude/skills/gcp-node-vm-deploy
 ```
 
 ### Claude Code (manual)
 
-```bash
+```shell
 # 1. Clone this repo
 git clone https://github.com/RenderbitTechnologies/gcp-vm-skills.git /tmp/gcp-vm-skills
 
-# 2. Copy the skill
+# 2. Copy the skill(s) you want
 mkdir -p ~/.agents/skills/gcp-node-vm-deploy
-cp /tmp/gcp-vm-skills/gcp-node-vm-deploy/SKILL.md ~/.agents/skills/gcp-node-vm-deploy/SKILL.md
+cp -r /tmp/gcp-vm-skills/gcp-node-vm-deploy/. \
+      ~/.agents/skills/gcp-node-vm-deploy/
 
 # 3. Create the symlink Claude Code needs
-ln -s "../../.agents/skills/gcp-node-vm-deploy" ~/.claude/skills/gcp-node-vm-deploy
+ln -s "../../.agents/skills/gcp-node-vm-deploy" \
+      ~/.claude/skills/gcp-node-vm-deploy
 ```
 
 Restart Claude Code — the skill will appear automatically.
+
+## Releases
+
+Tagged releases (e.g. `v1.0.0`) automatically package every skill as a `.skill` file and attach it to the [GitHub Release](https://github.com/RenderbitTechnologies/gcp-vm-skills/releases). A `.skill` file is a standard zip archive — you can inspect or extract it with any zip tool.
 
 ## Usage
 
