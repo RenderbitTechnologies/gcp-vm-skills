@@ -4,7 +4,7 @@ Claude Code skills for deploying and managing Node.js applications on Google Clo
 
 ## Skills
 
-### `gcp-node-vm-deploy`
+### [`gcp-node-vm-deploy`](./gcp-node-vm-deploy/SKILL.md)
 
 Provisions a GCP Compute Engine VM and wires up a full production stack:
 
