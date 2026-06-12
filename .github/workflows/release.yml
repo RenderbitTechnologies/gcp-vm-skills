@@ -1,0 +1,31 @@
+name: Release Skills
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Package skills
+        run: |
+          mkdir -p dist
+          for dir in */; do
+            skill="${dir%/}"
+            if [ -f "$skill/SKILL.md" ]; then
+              zip -r "dist/$skill.skill" "$skill"
+              echo "Packaged $skill.skill"
+            fi
+          done
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.skill
