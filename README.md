@@ -1,4 +1,4 @@
-# gcp-vm-skills
+# GCP VM Skills
 
 AI agent skills for deploying and managing back-end and full-stack applications on Google Cloud Platform Compute Engine VMs.
 
