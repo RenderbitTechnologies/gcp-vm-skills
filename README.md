@@ -44,7 +44,7 @@ git clone https://github.com/UEM-Group-Websites/gcp-vm-skills.git /tmp/gcp-vm-sk
 
 # 2. Copy the skill
 mkdir -p ~/.agents/skills/gcp-node-vm-deploy
-cp /tmp/gcp-vm-skills/skills/gcp-node-vm-deploy/SKILL.md ~/.agents/skills/gcp-node-vm-deploy/SKILL.md
+cp /tmp/gcp-vm-skills/gcp-node-vm-deploy/SKILL.md ~/.agents/skills/gcp-node-vm-deploy/SKILL.md
 
 # 3. Create the symlink Claude Code needs
 ln -s "../../.agents/skills/gcp-node-vm-deploy" ~/.claude/skills/gcp-node-vm-deploy
@@ -73,9 +73,10 @@ Claude will walk you through the full provisioning flow, filling in your project
 
 ```
 gcp-vm-skills/
-└── skills/
-    └── gcp-node-vm-deploy/
-        └── SKILL.md          # Skill instructions and deploy script templates
+└── gcp-node-vm-deploy/
+    ├── SKILL.md              # Skill instructions and deploy script templates
+    └── references/
+        └── templates.md      # Shell script and config file templates
 ```
 
 ## License
